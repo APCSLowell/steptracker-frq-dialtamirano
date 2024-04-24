@@ -1,20 +1,30 @@
 import java.util.ArrayList;
 public class StepTracker
 {
- /* to be implemented here */
- public static int numberOfLeapYears(int y1, int y2){
- int count = 0;
- for(int y = y1; y <= y2; y++){
-  if(isLEAPyEAR(y)){
-   count++;
+private int minSteps, totalSteps;
+ private int totalDays, actDays;
+ public StepTracker(int goal){
+ minSteps = goal;
+ totalSteps = 0;
+ totalDays = 0;
+ actDays = 0;
+ }
+ public void addDailySteps(int steps){
+  tottalSteps += steps;
+  totalDays++;
+  if(steps >= minSteps){
+   actDays++;
   }
  }
-  return count;
+ punlic int activeDays(){
+  return actDays;
+ }
+ public double averageSteps(){
+  if(totalDays == 0){
+   return 0.0;
   }
- public static int dayOfWeek(int month, int day. int year){
-  int startDay = firstDayOfYear(year);
-   int nthDay = dayOfYear(month,day,year);
-   int returnDay = (startDay + nthDay - 1) % 7;
-   return returnDay;
+  else{
+   return (double)totalSteps/totalDays;
+  }
  }
 } 
