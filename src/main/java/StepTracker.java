@@ -10,13 +10,13 @@ private int minSteps, totalSteps;
  actDays = 0;
  }
  public void addDailySteps(int steps){
-  tottalSteps += steps;
+  totalSteps += steps;
   totalDays++;
   if(steps >= minSteps){
    actDays++;
   }
  }
- punlic int activeDays(){
+ public int activeDays(){
   return actDays;
  }
  public double averageSteps(){
